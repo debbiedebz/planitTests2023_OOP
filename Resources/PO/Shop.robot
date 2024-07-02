@@ -17,6 +17,7 @@ Stuffed Frogs
     #Set Focus To Element    id=product-2
     FOR    ${index}    IN RANGE     (2)
     Click Link              xpath://*[@id="product-2"]/div/p/a
+    Sleep                   2s
     END
 
 Fluffy Bunnies
@@ -24,6 +25,7 @@ Fluffy Bunnies
     Page Should Contain     Fluffy Bunny
     FOR    ${index}    IN RANGE     (5)
     Click Link              xpath://*[@id="product-4"]/div/p/a
+    Sleep                   2s
     END
 
 Valentine Bears
@@ -31,4 +33,5 @@ Valentine Bears
     Page Should Contain     Valentine Bear
     FOR    ${index}    IN RANGE     (3)
     Click Link              xpath://*[@id="product-7"]/div/p/a
+    Sleep                   2s
     END

@@ -40,7 +40,8 @@ Submit 5X
 
 Shop
     Home.Load and Verify Page
-#    Home.Click Start Shopping
+#    Home.Click Start Shopping - decided to use another link instead of the one in this. Turns out there
+#   are two ways to go to the shop: via menu/navi and via start shopping link
     Shop.Go to Shop
 
 Buy Stuffed Toys
