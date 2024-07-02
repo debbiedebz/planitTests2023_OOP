@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on darwin)" generated="2024-07-02T19:59:29.223153" rpa="false" schemaversion="5">
+<suite id="s1" name="jupiterToysTCs" source="/Users/main/Development/robotScripts/applicationTests/planitTests2023_OOP/Tests/jupiterToysTCs.robot">
+<test id="s1-t1" name="Test Case 3: Cart page - Check the number of purchased items and prices" line="32">
+<kw name="Begin Web Test" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:29.276650" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-02T19:59:29.276567" elapsed="0.627569"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:29.276279" elapsed="0.628084"/>
+</kw>
+<kw name="Shop" owner="JupiterToys">
+<kw name="Load and Verify Page" owner="Home">
+<kw name="Load" owner="Home">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:29.905200" level="INFO">Opening url 'https://jupiter.cloud.planittesting.com/#/'</msg>
+<arg>https://jupiter.cloud.planittesting.com/#/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-02T19:59:29.905138" elapsed="1.761373"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:29.905033" elapsed="1.761606"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Home">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Jupiter Toys</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.667025" elapsed="0.008372"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:31.666805" elapsed="0.008656"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:29.904942" elapsed="1.770551"/>
+</kw>
+<kw name="Go to Shop" owner="Shop">
+<kw name="Click Start Shopping" owner="Home">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:31.675987" level="INFO">Click Start Shopping button</msg>
+<arg>Click Start Shopping button</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.675900" elapsed="0.000114"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Start Shopping »</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.676082" elapsed="0.006735"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.683172" level="INFO">Clicking link '//a[@href='#/shop']'.</msg>
+<arg>//a[@href='#/shop']</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.682914" elapsed="0.033107"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:31.675758" elapsed="0.040360"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Teddy Bear</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.716205" elapsed="0.220376"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:31.675596" elapsed="0.261075"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:29.904730" elapsed="2.031982"/>
+</kw>
+<kw name="Buy Stuffed Toys" owner="JupiterToys">
+<kw name="Stuffed Frogs" owner="Shop">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:31.937401" level="INFO">Buy 2 Stuffed Frogs</msg>
+<arg>Buy 2 Stuffed Frogs</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.937324" elapsed="0.000107"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.944736" level="INFO">Current page contains text 'Stuffed Frog'.</msg>
+<arg>Stuffed Frog</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.937504" elapsed="0.007270"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.945178" level="INFO">Clicking link 'xpath://*[@id="product-2"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-2"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.945075" elapsed="0.027037"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-07-02T19:59:31.944998" elapsed="0.027160"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.972409" level="INFO">Clicking link 'xpath://*[@id="product-2"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-2"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.972315" elapsed="0.017362"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-07-02T19:59:31.972250" elapsed="0.017485"/>
+</iter>
+<var>${index}</var>
+<value>(2)</value>
+<status status="PASS" start="2024-07-02T19:59:31.944833" elapsed="0.044938"/>
+</for>
+<status status="PASS" start="2024-07-02T19:59:31.937170" elapsed="0.052655"/>
+</kw>
+<kw name="Fluffy Bunnies" owner="Shop">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:31.990190" level="INFO">Buy 5 Fluffy Bunnies</msg>
+<arg>Buy 5 Fluffy Bunnies</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.990126" elapsed="0.000086"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.996458" level="INFO">Current page contains text 'Fluffy Bunny'.</msg>
+<arg>Fluffy Bunny</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.990274" elapsed="0.006226"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:31.996909" level="INFO">Clicking link 'xpath://*[@id="product-4"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-4"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:31.996802" elapsed="0.017957"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-07-02T19:59:31.996709" elapsed="0.018095"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.015044" level="INFO">Clicking link 'xpath://*[@id="product-4"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-4"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.014951" elapsed="0.015739"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-07-02T19:59:32.014885" elapsed="0.015850"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.030931" level="INFO">Clicking link 'xpath://*[@id="product-4"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-4"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.030857" elapsed="0.014812"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-07-02T19:59:32.030799" elapsed="0.014907"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.045905" level="INFO">Clicking link 'xpath://*[@id="product-4"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-4"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.045825" elapsed="0.015845"/>
+</kw>
+<var name="${index}">3</var>
+<status status="PASS" start="2024-07-02T19:59:32.045769" elapsed="0.015936"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.061881" level="INFO">Clicking link 'xpath://*[@id="product-4"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-4"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.061811" elapsed="0.014576"/>
+</kw>
+<var name="${index}">4</var>
+<status status="PASS" start="2024-07-02T19:59:32.061761" elapsed="0.014664"/>
+</iter>
+<var>${index}</var>
+<value>(5)</value>
+<status status="PASS" start="2024-07-02T19:59:31.996569" elapsed="0.079880"/>
+</for>
+<status status="PASS" start="2024-07-02T19:59:31.989975" elapsed="0.086568"/>
+</kw>
+<kw name="Valentine Bears" owner="Shop">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:32.076828" level="INFO">Buy 3 Valentine Bears</msg>
+<arg>Buy 3 Valentine Bears</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.076782" elapsed="0.000063"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.081993" level="INFO">Current page contains text 'Valentine Bear'.</msg>
+<arg>Valentine Bear</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.076888" elapsed="0.005135"/>
+</kw>
+<for flavor="IN RANGE">
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.082268" level="INFO">Clicking link 'xpath://*[@id="product-7"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-7"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.082200" elapsed="0.017602"/>
+</kw>
+<var name="${index}">0</var>
+<status status="PASS" start="2024-07-02T19:59:32.082156" elapsed="0.017688"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.100069" level="INFO">Clicking link 'xpath://*[@id="product-7"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-7"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.099978" elapsed="0.021849"/>
+</kw>
+<var name="${index}">1</var>
+<status status="PASS" start="2024-07-02T19:59:32.099921" elapsed="0.021955"/>
+</iter>
+<iter>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:32.122160" level="INFO">Clicking link 'xpath://*[@id="product-7"]/div/p/a'.</msg>
+<arg>xpath://*[@id="product-7"]/div/p/a</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.122042" elapsed="0.017124"/>
+</kw>
+<var name="${index}">2</var>
+<status status="PASS" start="2024-07-02T19:59:32.121952" elapsed="0.017265"/>
+</iter>
+<var>${index}</var>
+<value>(3)</value>
+<status status="PASS" start="2024-07-02T19:59:32.082058" elapsed="0.057186"/>
+</for>
+<status status="PASS" start="2024-07-02T19:59:32.076660" elapsed="0.062631"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:31.936924" elapsed="0.202390"/>
+</kw>
+<kw name="Open Cart" owner="JupiterToys">
+<kw name="Open Cart" owner="Cart">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.140272" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-07-02T19:59:32.139667" elapsed="3.000945"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.141372" level="INFO">Go to Cart page</msg>
+<arg>Go to Cart page</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.141093" elapsed="0.000387"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.142122" level="INFO">Clicking element 'xpath://*[@id="nav-cart"]/a'.</msg>
+<arg>xpath://*[@id="nav-cart"]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.141801" elapsed="0.038612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//thead/tr/th[4]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.180553" elapsed="0.222471"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:32.139574" elapsed="3.263532"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:32.139440" elapsed="3.263699"/>
+</kw>
+<kw name="Verify the Quantity" owner="JupiterToys">
+<kw name="Verify the Quantity" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.403716" level="INFO">Checking ordered quantities are correct</msg>
+<arg>Checking ordered quantities are correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.403642" elapsed="0.000098"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.403839" level="INFO">Check the Stuffed Frog quantity is correct</msg>
+<arg>Check the Stuffed Frog quantity is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.403792" elapsed="0.000063"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.412892" level="INFO">${numberOfStuffedFrogOrdered} = 2</msg>
+<var>${numberOfStuffedFrogOrdered}</var>
+<arg>xpath://tr[1]/td[3]/input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.403920" elapsed="0.008993"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${numberOfStuffedFrogOrdered}=2'== 'TRUE'</arg>
+<arg>Run Keywords</arg>
+<arg>log The number of Stuffed Frogs ordered are correct</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.413008" elapsed="0.000133"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.413259" level="INFO">Check the Fluffy Bunny quantity is correct</msg>
+<arg>Check the Fluffy Bunny quantity is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.413207" elapsed="0.000070"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.421833" level="INFO">${numberOfStuffedFluffyBunniesOrdered} = 5</msg>
+<var>${numberOfStuffedFluffyBunniesOrdered}</var>
+<arg>xpath://tr[2]/td[3]/input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.413329" elapsed="0.008523"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${numberOfStuffedFluffyBunniesOrdered}=5'== 'TRUE'</arg>
+<arg>Run Keywords</arg>
+<arg>log The number of Fluffy Bunnies ordered are correct</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.421967" elapsed="0.000149"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.422285" level="INFO">Check the Valentine Bears quantity is correct</msg>
+<arg>Check the Valentine Bears quantity is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.422185" elapsed="0.000128"/>
+</kw>
+<kw name="Get Value" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.429255" level="INFO">${numberOfStuffedValentineBearsOrdered} = 3</msg>
+<var>${numberOfStuffedValentineBearsOrdered}</var>
+<arg>xpath://tr[3]/td[3]/input</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.422397" elapsed="0.006877"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${numberOfStuffedValentineBearsOrdered}=2'== 'TRUE'</arg>
+<arg>Run Keywords</arg>
+<arg>log The number of Valentine Bears ordered are correct</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.429370" elapsed="0.000090"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.403511" elapsed="0.025987"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.403298" elapsed="0.026224"/>
+</kw>
+<kw name="Verify the Price" owner="JupiterToys">
+<kw name="Verify the Price" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.429881" level="INFO">Checking if the individual prices are correct</msg>
+<arg>Checking if the individual prices are correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.429839" elapsed="0.000059"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.429975" level="INFO">Check the Stuffed Frog individual price is correct</msg>
+<arg>Check the Stuffed Frog individual price is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.429944" elapsed="0.000085"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.430173" level="INFO">Verifying element 'xpath://tr[1]/td[2]' contains exact text '$10.99'.</msg>
+<arg>@{StuffedFrog_unitPrice_actual}</arg>
+<arg>@{StuffedFrog_unitPrice_expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.430073" elapsed="0.010425"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.440658" level="INFO">Check the Fluffy Bunnies's individual prices are correct</msg>
+<arg>Check the Fluffy Bunnies's individual prices are correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.440596" elapsed="0.000078"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.440825" level="INFO">Verifying element 'xpath://tr[2]/td[2]' contains exact text '$9.99'.</msg>
+<arg>@{FluffyBunny_unitPrice_actual}</arg>
+<arg>@{FluffyBunny_unitPrice_expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.440723" elapsed="0.008007"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.448867" level="INFO">Check the Valentine Bear individual prices are correct</msg>
+<arg>Check the Valentine Bear individual prices are correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.448813" elapsed="0.000073"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.449021" level="INFO">Verifying element 'xpath://tr[3]/td[2]' contains exact text '$14.99'.</msg>
+<arg>@{ValentineBear__unitPrice_actual}</arg>
+<arg>@{ValentineBear__unitPrice_expected}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.448931" elapsed="0.008314"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.429758" elapsed="0.027536"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.429629" elapsed="0.027690"/>
+</kw>
+<kw name="Verify the Subtotal" owner="JupiterToys">
+<kw name="Verify the Subtotal" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.457848" level="INFO">Verifying Subtotals...</msg>
+<arg>Verifying Subtotals...</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.457798" elapsed="0.000072"/>
+</kw>
+<kw name="Verify Subtotals - Stuffed Frog" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.458138" level="INFO">Check the Stuffed Frog subtotal is correct</msg>
+<arg>Check the Stuffed Frog subtotal is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.458020" elapsed="0.000135"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.458294" level="INFO">Verifying element 'xpath://tr[1]/td[4]' contains exact text '$21.98'.</msg>
+<arg>@{StuffedFrog_subtotal_actual}</arg>
+<arg>$21.98</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.458206" elapsed="0.007373"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.457938" elapsed="0.007689"/>
+</kw>
+<kw name="Verify Subtotals - Fluffy Bunnies" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.465859" level="INFO">Check the Fluffy Bunny subtotal is correct</msg>
+<arg>Check the Fluffy Bunny subtotal is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.465815" elapsed="0.000063"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.466007" level="INFO">Verifying element 'xpath://tr[2]/td[4]' contains exact text '$49.95'.</msg>
+<arg>@{FluffyBunny_subtotal_actual}</arg>
+<arg>$49.95</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.465925" elapsed="0.007515"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.465704" elapsed="0.007780"/>
+</kw>
+<kw name="Verify Subtotals - Valentine Bears" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.473696" level="INFO">Check the Valentine Bears subtotal is correct</msg>
+<arg>Check the Valentine Bears subtotal is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.473652" elapsed="0.000060"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.473838" level="INFO">Verifying element 'xpath://tr[3]/td[4]' contains exact text '$44.97'.</msg>
+<arg>@{ValentineBear_subtotal_actual}</arg>
+<arg>$44.97</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.473764" elapsed="0.006949"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.473552" elapsed="0.007195"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.457655" elapsed="0.023112"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.457431" elapsed="0.023351"/>
+</kw>
+<kw name="Verify the Total" owner="JupiterToys">
+<kw name="Verify the Total" owner="Cart">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-02T19:59:35.481102" level="INFO">Check the Total Cost is correct</msg>
+<arg>Check the Total Cost is correct</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.481056" elapsed="0.000065"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-07-02T19:59:35.481240" level="INFO">Verifying element 'xpath://tfoot/tr[1]/td/strong' contains exact text 'Total: 116.9'.</msg>
+<arg>@{CartTotal_actual}</arg>
+<arg>Total: 116.9</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.481168" elapsed="0.009630"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.480982" elapsed="0.009874"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.480878" elapsed="0.010000"/>
+</kw>
+<kw name="End Web Test" owner="Common" type="TEARDOWN">
+<kw name="Run Keyword If Test Failed" owner="BuiltIn">
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if the test failed.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.491188" elapsed="0.000083"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-02T19:59:35.491352" elapsed="0.081613"/>
+</kw>
+<status status="PASS" start="2024-07-02T19:59:35.491041" elapsed="0.082001"/>
+</kw>
+<doc>Test Case3: Shop Toys</doc>
+<tag>3 shop</tag>
+<tag>cart</tag>
+<status status="PASS" start="2024-07-02T19:59:29.275930" elapsed="6.297183"/>
+</test>
+<doc>These contain test cases made for Planit's Automation Lead application</doc>
+<status status="PASS" start="2024-07-02T19:59:29.223991" elapsed="6.349405"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">3 shop</stat>
+<stat pass="1" fail="0" skip="0">cart</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="jupiterToysTCs">jupiterToysTCs</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
