@@ -5,7 +5,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running test...'
-                robot -d results Tests/jupiterToysTCs.robot
+                sh script: "robot -d results Tests/jupiterToysTCs.robot", returnStatus: true
             }
         }
     }
